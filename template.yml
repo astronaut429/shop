@@ -1,0 +1,17 @@
+Transform: AWS::Serverless-2016-10-31
+
+Resources:
+  CalcFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: ../src
+      Events:
+        HttpEvent:
+          Type: HttpApi
+          Properties:
+            Method: POST
+            Path: /
+      Handler: index.handler
+      PackageType: Zip
+      Policies: AWSLambdaBasicExecutionRole
+      Runtime: nodejs16.x

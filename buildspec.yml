@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 16.x
+  pre_build:
+    commands:
+
+  build:
+    commands:
+  post_build:
+    commands:
+      - sam deploy --template-file infrastructure/template.yaml --stack-name calc --resolve-s3 --capabilities CAPABILITY_IAM
