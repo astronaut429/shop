@@ -9,8 +9,8 @@ Resources:
         HttpEvent:
           Type: HttpApi
           Properties:
-            Method: POST
-            Path: /
+            Method: GET
+            Path: /products
       Handler: index.handler
       PackageType: Zip
       Policies: AWSLambdaBasicExecutionRole
