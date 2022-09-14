@@ -14,4 +14,4 @@ Resources:
       Handler: index.handler
       PackageType: Zip
       Policies: AWSLambdaBasicExecutionRole
-      Runtime: nodejs16.x
+      Runtime: nodejs14.x
