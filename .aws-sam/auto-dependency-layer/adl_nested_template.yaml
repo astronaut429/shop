@@ -1,0 +1,36 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: AWS SAM CLI Nested Stack for Auto Dependency Layer Creation
+Metadata:
+  SamCliInfo: 1.55.0
+  key: AWS SAM CLI sync command
+Outputs:
+  CalcFunction739b288bDepLayer:
+    Value:
+      Ref: CalcFunction739b288bDepLayer
+  PutProductFunctionb4f5bc59DepLayer:
+    Value:
+      Ref: PutProductFunctionb4f5bc59DepLayer
+Resources:
+  CalcFunction739b288bDepLayer:
+    Metadata:
+      CreatedBy: AWS SAM CLI sync command
+    Properties:
+      CompatibleRuntimes:
+      - nodejs16.x
+      ContentUri: /home/daniel/shop/.aws-sam/auto-dependency-layer/CalcFunction739b288bDepLayer
+      Description: Auto created layer for dependencies of function CalcFunction
+      LayerName: shopfb54f3c5-CalcFunction739b288b-DepLayer
+      RetentionPolicy: Delete
+    Type: AWS::Serverless::LayerVersion
+  PutProductFunctionb4f5bc59DepLayer:
+    Metadata:
+      CreatedBy: AWS SAM CLI sync command
+    Properties:
+      CompatibleRuntimes:
+      - nodejs16.x
+      ContentUri: /home/daniel/shop/.aws-sam/auto-dependency-layer/PutProductFunctionb4f5bc59DepLayer
+      Description: Auto created layer for dependencies of function PutProductFunction
+      LayerName: shopfb54f3c5-PutProductFunctionb4f5bc59-DepLayer
+      RetentionPolicy: Delete
+    Type: AWS::Serverless::LayerVersion
+Transform: AWS::Serverless-2016-10-31
