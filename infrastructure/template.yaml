@@ -1,15 +1,15 @@
 Transform: AWS::Serverless-2016-10-31
 
 Resources:
-  CalcFunction:
+  GetProductsFunction:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: ../src
+      CodeUri: ../src/getProduct
       Events:
         HttpEvent:
           Type: HttpApi
           Properties:
-            Method: POST
+            Method: GET
             Path: /products
       Handler: index.handler
       PackageType: Zip
@@ -19,7 +19,7 @@ Resources:
   PutProductFunction:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: ../src
+      CodeUri: ../src/putProduct
       Events:
         HttpEvent:
           Type: HttpApi
