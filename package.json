@@ -11,7 +11,8 @@
     "pipeline:delete": ". scripts/env.sh && aws cloudformation delete-stack --stack-name $SHOP_APP_STACK_NAME-pipeline",
     "infra:setup": "aws cloudformation create-stack --stack-name shop-shared --template-body file://infrastructure/shared.yaml",
     "infra:update": "aws cloudformation update-stack --stack-name shop-shared --template-body file://infrastructure/shared.yaml",
-    "sam:sync": "sam sync --template-file infrastructure/template.yaml --stack-name shop --capabilities CAPABILITY_IAM CAPABILITY_AUTO_EXPAND --watch"
+    "sam:sync": "sam sync --template-file infrastructure/template.yaml --stack-name shop --capabilities CAPABILITY_IAM CAPABILITY_AUTO_EXPAND --watch",
+    "sam:build": "sam build --template-file infrastructure/template.yaml"
   },
   "keywords": [],
   "author": "",

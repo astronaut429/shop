@@ -28,7 +28,9 @@ Resources:
             Path: /products
       Handler: index.handler
       PackageType: Zip
-      Policies: AWSLambdaBasicExecutionRole
+      Policies:
+        - AWSLambdaBasicExecutionRole
+        - AmazonDynamoDBFullAccess
       Runtime: nodejs16.x
 
   ProductsTable:
